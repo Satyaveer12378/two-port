@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="7inch-Layout">
+    <mxGraphModel dx="1024" dy="600" grid="1" gridSize="10" guides="1" tooltips="1"
+      connect="1" arrows="1" fold="1" page="1" pageScale="1"
+      pageWidth="1024" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Top Bar -->
+        <mxCell id="2" value="Top Bar (1024x50)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="1024" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Gain Box -->
+        <mxCell id="3" value="GAIN Box (120x60)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="60" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Graph Area -->
+        <mxCell id="4" value="Graph Area (650x400)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="60" width="650" height="400" as="geometry"/>
+        </mxCell>
+
+        <!-- Right Vertical Menu -->
+        <mxCell id="5" value="ZERO (200x60)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="60" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="RANGE (200x60)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="130" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="MTL VEL (200x60)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="200" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="DELAY (200x60)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="270" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="MENU (200x60)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="340" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Bottom Data Boxes -->
+        <mxCell id="10" value="SPa (120x50)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="480" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="SPb (120x50)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="480" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="DPa (120x50)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="480" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" value="DPb (120x50)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="480" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="SDa (120x50)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="480" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" value="SDb (120x50)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="480" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Second bottom row -->
+        <mxCell id="16" value="Ea (120x50)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="540" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" value="Eb (120x50)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="540" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Bottom Right Time & Date -->
+        <mxCell id="18" value="Time &amp; Date (200x60)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="480" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Bottom Center Navigation -->
+        <mxCell id="19" value="Page Navigation (150x50)" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="540" width="150" height="50" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
