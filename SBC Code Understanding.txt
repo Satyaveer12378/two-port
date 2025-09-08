@@ -1,0 +1,105 @@
+🔹 GTK3 (UI widgets & layout)
+
+gtkdeclarations.h → likely contains widget declarations, GTK includes, signal connections.
+
+cbentry.h, cbentry_safe1.h, cbtextwidget.h → custom GTK widgets (text entry, input fields).
+
+Ruler.h, Ruler_safe_1.h, Ruler_safe_2.h → custom GTK drawing widgets (probably using Cairo).
+
+Resource.h → resources (icons, images) used in GTK UI.
+
+🔹 Cairo (2D graphics, plotting)
+
+plot_data.h → looks like it handles plotting/graph data, probably drawn with Cairo.
+
+Ruler*.h and cbtextwidget.h → custom widgets often use Cairo for drawing rulers, labels, text, and live plots.
+
+🔹 OpenGL (hardware-accelerated drawing)
+
+OpenGL.c, OpenGL.h → OpenGL rendering functions (for fast graph plotting on 1024x600).
+
+This is where you’ll learn about integrating OpenGL inside GTK (using GtkGLArea or similar).
+
+🔹 Supporting modules
+
+Dav_Sub.c/h → seems like utility functions, may also touch UI indirectly.
+
+dataval.h, shp_prf.h, thick_log.h → data structures for graph/plot values.
+
+
+
+
+
+
+Where the Home Screen UI lives (mapping)
+1) Main/home screen layout & glue code
+
+Dav_Sub.c
+
+Role: central UI assembly and event/drawing glue for the display.
+
+What I found: references to home, top-bar items, menu switching, lots of drawing function calls and render helpers (grid, gate drawing, DAC curve, beam profile). This is the primary place that builds the home screen and connects plotting & controls.
+
+Why read: it ties together GTK widgets, plotting update calls, and input handlers (prev/next/menu). Good starting point to understand how the home screen is constructed and updated.
+
+2) Plot / live-graph data & drawing
+
+plot_data.h
+
+Role: data structures and functions for the live-graph (plot) data.
+
+What I found: the plot data model and functions used to populate the graph; used by drawing functions in the UI.
+
+Why read: shows how graph values are stored/updated before drawing; important to see how FPGA data becomes graph points.
+
+3) OpenGL rendering (fast drawing path)
+
+OpenGL.c and OpenGL.h
+
+Role: OpenGL-based rendering routines (hardware-accelerated).
+
+What I found: draw/render functions and OpenGL helpers referenced from drawing code. These are used where performance matters (live plot rendering).
+
+Why read: if you want to learn OpenGL integration for the live graph (and how GTK can host GL content), this is the place.
+
+4) Cairo / 2D custom widgets & rulers
+
+Ruler.h, Ruler_safe_1.h, Ruler_safe_2.h
+
+Role: custom widgets that draw rulers/grids/scale markers (likely using Cairo).
+
+What I found: dedicated draw functions — typical Cairo-style API usage (line drawing, text labels).
+
+Why read: shows how 2D elements (axes, tick marks, scales) are rendered using Cairo — useful when studying GTK + Cairo drawing callbacks.
+
+5) Custom input / text widgets / buttons
+
+cbentry.h, cbentry_safe1.h, cbtextwidget.h
+
+Role: custom GTK widgets (entry fields, configurable text widgets, perhaps custom buttons).
+
+Why read: these control input handling for your on-screen keypad and possibly the right-side menu buttons—look here to modify behavior or styling.
+
+6) GTK global declarations & widget pointers
+
+gtkdeclarations.h
+
+Role: global GTK objects / widget declarations, signal prototypes.
+
+Why read: find where top-bar widgets, menu buttons & signal handlers are declared — it helps to trace how events flow from buttons to handlers.
+
+7) Resources (icons, images)
+
+Resource.h
+
+Role: image resource references used by the top bar (company logo, battery icon, SD-card icon).
+
+Why read: if you want to change the splash/logo/top-bar visuals, this file lists the assets.
+
+8) Shared data & flags (battery / sdcard / menu index)
+
+dataval.h
+
+Role: shared variables for battery status, SD card, menu index etc.
+
+Why read: these flags drive the top-bar indicators and menu logic; changing how status is computed/updated starts here.
